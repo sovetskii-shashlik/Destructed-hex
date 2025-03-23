@@ -16,25 +16,6 @@ StarterGui:SetCore("SendNotification", {
 end
 end
 
-if game.CoreGui:FindFirstChild("destruct") and game.CoreGui:FindFirstChild("dstc") then
-game.CoreGui.destruct:Destroy()
-game.CoreGui.dstc:Destroy()
-end
-
-if game:GetService("Workspace"):FindFirstChild("Blur") then
-game:GetService("Workspace").Blur:Destroy()
-end
-
-local BlurFX = Instance.new("BlurEffect")
-BlurFX.Size = nil
-BlurFX.Name = "Blur"
-BlurFX.Parent = workspace.CurrentCamera
-
-local function blurefct(siz)
-local TweenService = game:GetService("TweenService")
-local goal = {}
-goal.Size = siz
-
 local tweenInfo = TweenInfo.new(2)
 local tween = TweenService:Create(BlurFX, tweenInfo, goal)
 
