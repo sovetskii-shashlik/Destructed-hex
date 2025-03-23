@@ -200,13 +200,6 @@ dstc.Name = "dstc"
 dstc.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 dstc.Parent = game.CoreGui
 
-note.Name = "note"
-note.Parent = dstc
-note.BackgroundColor3 = Color3.fromRGB(44, 45, 45)
-note.BorderColor3 = Color3.fromRGB(0, 0, 0)
-note.Position = UDim2.new(0.088, 0,0.75, 0)
-note.Size = UDim2.new(0, 302, 0, 84)
-
 logo.Name = "logo"
 logo.Parent = note
 logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
