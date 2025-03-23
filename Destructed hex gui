@@ -26,7 +26,7 @@ game:GetService("Workspace").Blur:Destroy()
 end
 
 local BlurFX = Instance.new("BlurEffect")
-BlurFX.Size = 0
+BlurFX.Size = nil
 BlurFX.Name = "Blur"
 BlurFX.Parent = workspace.CurrentCamera
 
@@ -1235,6 +1235,8 @@ btn.MouseButton1Click:Connect(function()
 		['TextColor3'] = Color3.fromRGB(255, 255, 255);
 	}):Play();
 end)
+end
+end
 end
 end
 
