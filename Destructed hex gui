@@ -3,117 +3,12 @@
 local version = "2.4.8"
 local fe = string.reverse("eu2kFVKZjH/gg.drocsid")
 
-local StarterGui = game:GetService("StarterGui")
-local showNotification = true
-
-function Notify(tl, t, d) 
-if showNotification == true then
-StarterGui:SetCore("SendNotification", {
-	Title = tl;
-	Text = t;
-	Duration = d;
-})
-end
-end
-
-local tweenInfo = TweenInfo.new(2)
-local tween = TweenService:Create(BlurFX, tweenInfo, goal)
-
-tween:Play()
-end
-
 local remote = "nil"
 local found = false
 local enable = false
 local sent = false
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-
-local checkIn = {"Workspace", "ReplicatedStorage", "CoreGui"}
-
-local receiver = Instance.new("BindableFunction")
-receiver.OnInvoke = function(btn) 
-if btn == "Match" then
-local names = {"Delete", "Remove", "Tool", "Equip", "Destroy", "Change", "Parent", "Clean", "Clear","Bullet", "Bala", "Shoot", "Shot", "Fire", "Segway", "Handless", "Sword", "Attack", "Despawn", "Unspawn", "Deletar", "Apagar"}
-if char:FindFirstChild("Body Colors") then
-blurefct(20)
-Notify("Vulnerability Checker", "Looking up for remotes, may take a while.", 3)
-for _, service in pairs(checkIn) do
-for i,v in pairs(game:GetService(service):GetDescendants()) do
-for _, str in pairs(names) do
-if string.match(v.Name, str) and v:IsA("RemoteEvent") then
-print("Checking " .. v.Name .. " from " .. service .. " service from " .. str .. " category")
-local success, error = pcall(function()
-v:FireServer(char["Body Colors"])
-found = true
-end)
-if success then
-remote = v
-end 
-task.wait(0.5)
-if char then
-if not char:FindFirstChild("Body Colors") then
-enable = true
-sent = true
-return
-load()
-end
-end
-end
-end
-end
-end
-end
-
-if sent == false then
-Notify("Vulnerability Checker", "This game is not vulnerable/supported.", 5)
-blurefct(0)
-end
-
-elseif btn == "All" then
-if char:FindFirstChild("Body Colors") then
-blurefct(20)
-Notify("Vulnerability Checker", "Looking up for remotes, may take a while.", 3)
-for i,v in pairs(game:GetDescendants()) do
-if v:IsA("RemoteEvent") then
-print("Checking " .. v.Name)
-local success, error = pcall(function()
-v:FireServer(char["Body Colors"])
-found = true
-end)
-if success then
-remote = v
-end 
-task.wait(0.5)
-if char then
-if not char:FindFirstChild("Body Colors") then
-enable = true
-sent = true
-return
-load()
-end
-end
-end
-end
-end
-
-if sent == false then
-Notify("Vulnerability Checker", "This game is not vulnerable/supported.", 5)
-blurefct(0)
-end
-end
-end
-
-if remote == "nil" then
-StarterGui:SetCore("SendNotification", {
-	Title = "Vuln Scanner";
-	Text = "Please select the scan method.";
-	Duration = 9e9;
-	Button1 = "All";
-	Button2 = "Match";
-	Callback = receiver;
-})
-end
 
 function work(arg1)
 pcall(function() 
