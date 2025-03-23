@@ -192,11 +192,20 @@ local player = Instance.new("TextButton")
 local plrlist = Instance.new("ScrollingFrame")
 local plrsgrid = Instance.new("UIGridLayout")
 local dstc = Instance.new("ScreenGui")
+local note = Instance.new("Frame")
+local text = Instance.new("TextLabel")
 local logo = Instance.new("ImageLabel")
 
 dstc.Name = "dstc"
 dstc.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 dstc.Parent = game.CoreGui
+
+note.Name = "note"
+note.Parent = dstc
+note.BackgroundColor3 = Color3.fromRGB(44, 45, 45)
+note.BorderColor3 = Color3.fromRGB(0, 0, 0)
+note.Position = UDim2.new(0.088, 0,0.75, 0)
+note.Size = UDim2.new(0, 302, 0, 84)
 
 logo.Name = "logo"
 logo.Parent = note
@@ -1235,8 +1244,8 @@ btn.MouseButton1Click:Connect(function()
 end)
 end
 end
-end
-end
+
+text.Text = "Script: 011_luq & UI: awtch\nForce admin commands in-game without needing to worry about Filtering Enabled\nUse the internal GUI to execute commands\nVersion: "..version.."\nCommands: "..count
 
 end
 end
