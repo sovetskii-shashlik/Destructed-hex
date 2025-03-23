@@ -26,7 +26,7 @@ game:GetService("Workspace").Blur:Destroy()
 end
 
 local BlurFX = Instance.new("BlurEffect")
-BlurFX.Size = 0
+BlurFX.Size = nil
 BlurFX.Name = "Blur"
 BlurFX.Parent = workspace.CurrentCamera
 
@@ -1259,9 +1259,6 @@ btn.MouseButton1Click:Connect(function()
 end)
 end
 end
-
-text.Text = "Script: 011_luq & UI: awtch\nForce admin commands in-game without needing to worry about Filtering Enabled\nUse the internal GUI to execute commands\nVersion: "..version.."\nCommands: "..count
-
 end
 end
 
