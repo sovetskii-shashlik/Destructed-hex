@@ -1245,9 +1245,4 @@ end)
 end
 end
 
-text.Text = "Script: 011_luq & UI: awtch\nForce admin commands in-game without needing to worry about Filtering Enabled\nUse the internal GUI to execute commands\nVersion: "..version.."\nCommands: "..count
-
-end
-end
-
 -- GUI, Scripts/Commands by Luca and luq.
